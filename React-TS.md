@@ -1,0 +1,52 @@
+# React With TypeScript testing
+
+```
+yarn add @types/jest @testing-library/react @testing-library/jest-dom jest ts-jest
+```
+
+Add a new jest.config.js file to the root of your project:
+```
+module.exports = {
+  // The root of your source code, typically /src
+  // `<rootDir>` is a token Jest substitutes
+  roots: ["<rootDir>/src"],
+
+  // Jest transformations -- this adds support for TypeScript
+  // using ts-jest
+  transform: {
+    "^.+\\.tsx?$": "ts-jest"
+  },
+
+  // Runs special logic, such as cleaning up components
+  // when using React Testing Library and adds special
+  // extended assertions to Jest
+  setupFilesAfterEnv: [
+    "@testing-library/react/cleanup-after-each",
+    "@testing-library/jest-dom/extend-expect"
+  ],
+
+  // Test spec file resolution pattern
+  // Matches parent folder `__tests__` and filename
+  // should contain `test` or `spec`.
+  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+
+  // Module file extensions for importing
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"]
+};
+```
+
+
+### Usage
+
+```
+import React from "react";
+import { render, fireEvent, waitForElement } from "@testing-library/react";
+
+import LoginForm, { Props } from "./App";
+
+describe("<LoginForm />", () => {
+  test("should display a blank login form, with remember me checked by default", async () => {
+    // ???
+  });
+});
+```
