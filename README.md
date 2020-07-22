@@ -3,7 +3,9 @@
 Dependencies to be installed:
 
 ```
-yarn add enzyme @types/enzyme react-test-renderer enzyme-adapter-react-16 @types/enzyme-adapter-react-16 jest @types/jest ts-jest enzyme-to-json --dev
+yarn add enzyme @types/enzyme react-test-renderer \
+enzyme-adapter-react-16 @types/enzyme-adapter-react-16 jest \
+@types/jest ts-jest enzyme-to-json --dev
 ```
 
 ### Configure Jest
