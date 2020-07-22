@@ -2,7 +2,7 @@
 
 Dependencies to be installed:
 
-```
+```shell
 yarn add enzyme @types/enzyme react-test-renderer \
 enzyme-adapter-react-16 @types/enzyme-adapter-react-16 jest \
 @types/jest ts-jest enzyme-to-json --dev
@@ -10,7 +10,7 @@ enzyme-adapter-react-16 @types/enzyme-adapter-react-16 jest \
 
 ### Configure Jest
 Add the following jest.config.js file to the root of your project:
-```
+```ts
 module.exports = {
   roots: ['<rootDir>/src'],
   testMatch: [
