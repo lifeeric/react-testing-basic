@@ -2,7 +2,7 @@
 
 Dependencies to be installed:
 
-```shell
+```bash
 yarn add enzyme @types/enzyme react-test-renderer \
 enzyme-adapter-react-16 @types/enzyme-adapter-react-16 jest \
 @types/jest ts-jest enzyme-to-json --dev
@@ -33,7 +33,7 @@ module.exports = {
 
 ### Enzyme configuration
 Create src/setupEnzyme.ts file.
-```
+```ts
  import { configure } from 'enzyme';
  import EnzymeAdapter from 'enzyme-adapter-react-16';
  configure({ adapter: new EnzymeAdapter() });
@@ -43,7 +43,7 @@ Create src/setupEnzyme.ts file.
 
 create a same file with `*.test.js` in component directory like: `NavigationItems.test.js`
 
-```
+```ts
 import React from 'react';
 import { shallow } from 'enzyme';
 
